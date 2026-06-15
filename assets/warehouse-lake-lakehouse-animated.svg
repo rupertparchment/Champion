@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-label="Warehouse to Lakehouse evolution animated">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a2e35"/>
+      <stop offset="50%" stop-color="#1B3139"/>
+      <stop offset="100%" stop-color="#1a3530"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="400" fill="url(#bg3)" rx="12"/>
+  <text x="480" y="32" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Data Warehouse - Data Lake - Data Lakehouse</text>
+
+  <g font-family="Segoe UI, sans-serif" text-anchor="middle">
+    <text x="160" y="68" fill="#8ab4b8" font-size="14" font-weight="600">Data Warehouse</text>
+    <text x="480" y="68" fill="#8ab4b8" font-size="14" font-weight="600">Data Lake</text>
+    <text x="800" y="68" fill="#00A972" font-size="14" font-weight="700">Data Lakehouse</text>
+  </g>
+
+  <line x1="320" y1="80" x2="320" y2="360" stroke="#3d5a62" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="640" y1="80" x2="640" y2="360" stroke="#3d5a62" stroke-width="1" stroke-dasharray="4"/>
+
+  <rect x="80" y="300" width="160" height="40" rx="6" fill="#243a42" stroke="#666"/>
+  <text x="160" y="325" text-anchor="middle" fill="#ccc" font-size="11">Structured Data</text>
+  <rect x="110" y="230" width="100" height="36" rx="6" fill="#243a42" stroke="#888"/>
+  <text x="160" y="252" text-anchor="middle" fill="#ccc" font-size="11">ETL</text>
+  <rect x="90" y="160" width="140" height="40" rx="6" fill="#243a42" stroke="#888"/>
+  <text x="160" y="185" text-anchor="middle" fill="#ccc" font-size="11">Data Warehouse</text>
+  <rect x="70" y="90" width="70" height="32" rx="6" fill="#2d4a52" stroke="#FF3621"/>
+  <text x="105" y="110" text-anchor="middle" fill="#fff" font-size="10">BI</text>
+  <rect x="150" y="90" width="70" height="32" rx="6" fill="#2d4a52" stroke="#FF3621"/>
+  <text x="185" y="110" text-anchor="middle" fill="#fff" font-size="10">Reports</text>
+
+  <rect x="380" y="300" width="200" height="40" rx="6" fill="#243a42" stroke="#666"/>
+  <text x="480" y="320" text-anchor="middle" fill="#ccc" font-size="10">Structured / Semi / Unstructured</text>
+  <rect x="420" y="220" width="120" height="44" rx="6" fill="#243a42" stroke="#888"/>
+  <text x="480" y="246" text-anchor="middle" fill="#ccc" font-size="11">Data Lake</text>
+  <rect x="360" y="130" width="80" height="32" rx="6" fill="#2d4a52" stroke="#888"/>
+  <text x="400" y="150" text-anchor="middle" fill="#fff" font-size="9">ETL to DW</text>
+  <rect x="520" y="130" width="80" height="32" rx="6" fill="#2d4a52" stroke="#888"/>
+  <text x="560" y="150" text-anchor="middle" fill="#fff" font-size="9">DS / ML</text>
+  <rect x="400" y="80" width="60" height="28" rx="6" fill="#2d4a52" stroke="#FF3621"/>
+  <text x="430" y="98" text-anchor="middle" fill="#fff" font-size="9">BI</text>
+
+  <rect x="680" y="290" width="240" height="50" rx="8" fill="#1e3339" stroke="#00A972" stroke-width="2"/>
+  <text x="800" y="312" text-anchor="middle" fill="#e8f4f5" font-size="10">All data types</text>
+  <text x="800" y="328" text-anchor="middle" fill="#00A972" font-size="10">Single governed platform</text>
+
+  <rect x="700" y="200" width="200" height="70" rx="8" fill="#243a42" stroke="#FF3621" stroke-width="2"/>
+  <text x="800" y="228" text-anchor="middle" fill="#FF5F46" font-size="12" font-weight="600">Metadata &amp; Governance</text>
+  <text x="800" y="248" text-anchor="middle" fill="#ccc" font-size="10">Unity Catalog / Delta Lake</text>
+  <text x="800" y="264" text-anchor="middle" fill="#ccc" font-size="10">ETL + quality in one layer</text>
+
+  <rect x="660" y="80" width="75" height="30" rx="6" fill="#2d4a52" stroke="#00A972"/>
+  <text x="697" y="99" text-anchor="middle" fill="#fff" font-size="9">BI</text>
+  <rect x="745" y="80" width="75" height="30" rx="6" fill="#2d4a52" stroke="#00A972"/>
+  <text x="782" y="99" text-anchor="middle" fill="#fff" font-size="9">Reports</text>
+  <rect x="830" y="80" width="75" height="30" rx="6" fill="#2d4a52" stroke="#00A972"/>
+  <text x="867" y="99" text-anchor="middle" fill="#fff" font-size="9">DS / ML</text>
+
+  <circle r="4" fill="#aaa">
+    <animateMotion dur="2.5s" repeatCount="indefinite" path="M160,300 L160,266 L160,200 L160,122"/>
+  </circle>
+  <circle r="4" fill="#888">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="0.3s" path="M480,300 L480,264 L480,200 L430,98"/>
+  </circle>
+  <circle r="4" fill="#888">
+    <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.6s" path="M480,300 L480,264 L560,146"/>
+  </circle>
+  <circle r="5" fill="#00A972">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.2s" path="M800,290 L800,270 L800,200 L800,110"/>
+  </circle>
+  <circle r="5" fill="#FF3621">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="1s" path="M800,200 L697,95"/>
+  </circle>
+  <circle r="5" fill="#ffd700">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.2s" path="M800,200 L782,95"/>
+  </circle>
+  <circle r="5" fill="#7ec8e3">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="1.4s" path="M800,200 L867,95"/>
+  </circle>
+
+  <rect x="650" y="350" width="260" height="32" rx="6" fill="#00A972" opacity="0.2"/>
+  <text x="780" y="370" text-anchor="middle" fill="#00A972" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600">One platform - All personas - Governed Lakehouse</text>
+</svg>

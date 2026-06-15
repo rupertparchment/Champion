@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Architecture Diagrams — Rupert Parchment</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #0f1f24;
+      color: #e8f4f5;
+    }
+    header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #2d4a52;
+      background: #1B3139;
+    }
+    header h1 { margin: 0; color: #FF3621; font-size: 1.5rem; }
+    header p { margin: 0.4rem 0 0; color: #8ab4b8; font-size: 0.95rem; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    section {
+      margin-bottom: 2.5rem;
+      background: #1B3139;
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid #2d4a52;
+    }
+    section h2 { color: #FF5F46; margin: 0 0 0.75rem; font-size: 1.15rem; }
+    section p { color: #8ab4b8; font-size: 0.9rem; margin: 0 0 1rem; }
+    .frame { width: 100%; border-radius: 8px; overflow: hidden; background: #122228; }
+    .frame object, .frame img { width: 100%; display: block; }
+    .gif-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .gif-row img { width: 100%; border-radius: 8px; border: 1px solid #2d4a52; }
+    @media (max-width: 768px) { .gif-row { grid-template-columns: 1fr; } }
+    footer { text-align: center; padding: 2rem; color: #666; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Animated Architecture Diagrams</h1>
+    <p>Two stories: Story 1 Accenture DoD · Story 2 Blueprint Partner (NXP + MDFSG)</p>
+  </header>
+  <main>
+    <section style="border-color:#7ec8e3;">
+      <h2 style="color:#7ec8e3;">Story 1 — Accenture Federal / DoD Lakehouse</h2>
+      <p>ADF → Salesforce API → S3 → Databricks Bronze → Gold mirrored to Snowflake · 100B+ rows/week</p>
+      <div class="frame">
+        <object data="assets/lakehouse-flow-animated.svg" type="image/svg+xml"></object>
+      </div>
+    </section>
+    <section style="border-color:#ffd700;">
+      <h2 style="color:#ffd700;">Story 2 — Blueprint / NXP Lift-n-Shift</h2>
+      <p>Custom ingest notebook · parquet/csv/txt/json · Merge/Append/ReplaceWhere · 650+ tables (0.0001 GB–150 TB)</p>
+      <div class="frame">
+        <object data="assets/nxp-lift-shift-animated.svg" type="image/svg+xml"></object>
+      </div>
+    </section>
+    <section style="border-color:#ffd700;">
+      <h2 style="color:#ffd700;">Story 2 — Blueprint / Metadata Framework (MDFSG)</h2>
+      <p>Config-driven Silver/Gold — metadata row instead of new notebook per table</p>
+      <div class="frame">
+        <object data="assets/metadata-framework-flow-animated.svg" type="image/svg+xml"></object>
+      </div>
+    </section>
+    <section>
+      <h2>Reference — Data Intelligence Platform</h2>
+      <p>Static PNG (PowerPoint slide 11) — Warehouse → Lake → Lakehouse</p>
+      <div class="frame">
+        <img src="assets/data-intelligence-platform.png" alt="Data Warehouse to Data Lake to Data Lakehouse">
+      </div>
+    </section>
+    <section>
+      <h2>Reference — Warehouse → Lake → Lakehouse (animated)</h2>
+      <div class="frame">
+        <object data="assets/warehouse-lake-lakehouse-animated.svg" type="image/svg+xml"></object>
+      </div>
+    </section>
+    <section>
+      <h2>5. PowerPoint-ready animated GIFs</h2>
+      <p>These loop automatically when inserted into a slide (Insert → Pictures). Run <code>python add_diagrams_to_pptx.py</code> to embed them.</p>
+      <div class="gif-row">
+        <div>
+          <p>MDFSG flow</p>
+          <img src="assets/metadata-framework-flow.gif" alt="MDFSG animated GIF">
+        </div>
+        <div>
+          <p>Lakehouse pipeline</p>
+          <img src="assets/lakehouse-pipeline-flow.gif" alt="Lakehouse pipeline GIF">
+        </div>
+      </div>
+      <div class="frame" style="margin-top:1rem; max-width:960px;">
+        <img src="assets/warehouse-lake-lakehouse-flow.gif" alt="Evolution animated GIF">
+      </div>
+    </section>
+  </main>
+  <footer>Rupert Parchment · Databricks Champion peer review materials</footer>
+</body>
+</html>

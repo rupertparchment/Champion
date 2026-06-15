@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-label="NXP migration - historical ingest notebook to Gold">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#FF3621"/>
+    </marker>
+    <marker id="arr-gold" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#ffd700"/>
+    </marker>
+    <marker id="arr-teal" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#00A972"/>
+    </marker>
+    <marker id="arr-silver" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#c0c0c0"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#1B3139" rx="12"/>
+  <text x="480" y="28" text-anchor="middle" fill="#FF3621" font-family="Segoe UI,sans-serif" font-size="19" font-weight="700">NXP - Two Migration Paths</text>
+  <text x="480" y="48" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="10">Historical ingest notebook (Rupert) + parallel Bronze-Silver-Gold from 6/1/2026</text>
+
+  <!-- Path 1 -->
+  <rect x="24" y="58" width="912" height="198" rx="10" fill="#1a2520" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="42" y="78" fill="#ffd700" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700">Rupert - historical 2 PB straight to Gold (650+ tables)</text>
+
+  <!-- Sources - fully inside panel -->
+  <rect x="42" y="92" width="100" height="52" rx="8" fill="#243a42" stroke="#00A972" stroke-width="2"/>
+  <text x="92" y="114" text-anchor="middle" fill="#fff" font-family="Segoe UI,sans-serif" font-size="10" font-weight="600">Thailand</text>
+  <text x="92" y="130" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="8">operational files</text>
+
+  <rect x="42" y="154" width="100" height="52" rx="8" fill="#243a42" stroke="#FF3621" stroke-width="2"/>
+  <text x="92" y="176" text-anchor="middle" fill="#fff" font-family="Segoe UI,sans-serif" font-size="10" font-weight="600">USA</text>
+  <text x="92" y="192" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="8">AWS Snowball</text>
+
+  <!-- Ingest notebook -->
+  <rect x="168" y="92" width="248" height="114" rx="8" fill="#2d4a52" stroke="#ffd700" stroke-width="2"/>
+  <text x="292" y="112" text-anchor="middle" fill="#ffd700" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700">Historical Ingest Notebook</text>
+  <text x="292" y="128" text-anchor="middle" fill="#fff" font-family="Segoe UI,sans-serif" font-size="9">Parse: parquet | csv | txt | json</text>
+  <text x="292" y="144" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="9">Write: Merge | Append | ReplaceWhere</text>
+  <text x="292" y="162" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="9">650+ tables | 0.0001 GB to 150 TB each</text>
+  <text x="292" y="178" text-anchor="middle" fill="#666" font-family="Segoe UI,sans-serif" font-size="8">mirrors Hadoop / Impala / KUDU Gold targets</text>
+
+  <path d="M142,118 L168,118" stroke="#00A972" stroke-width="2" fill="none" marker-end="url(#arr-teal)"/>
+  <path d="M142,180 L168,180" stroke="#FF3621" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M168,118 L168,149" stroke="#5a8a94" stroke-width="1.5" fill="none"/>
+  <path d="M168,180 L168,149" stroke="#5a8a94" stroke-width="1.5" fill="none"/>
+
+  <!-- Straight horizontal pipeline: notebook to Gold -->
+  <path d="M416,149 L760,149" stroke="#ffd700" stroke-width="3" fill="none" marker-end="url(#arr-gold)"/>
+  <text x="588" y="136" text-anchor="middle" fill="#ffd700" font-family="Segoe UI,sans-serif" font-size="9" font-weight="600">skip Bronze / Silver</text>
+
+  <rect x="760" y="108" width="130" height="82" rx="8" fill="#2d4a52" stroke="#ffd700" stroke-width="3"/>
+  <text x="825" y="138" text-anchor="middle" fill="#ffd700" font-family="Segoe UI,sans-serif" font-size="14" font-weight="700">Gold</text>
+  <text x="825" y="156" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="9">2+ PB historical</text>
+  <text x="825" y="172" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="9">650+ Delta tables</text>
+  <text x="825" y="186" text-anchor="middle" fill="#a8d4ff" font-family="Segoe UI,sans-serif" font-size="8">Liquid Clustering post 6/1/2026</text>
+
+  <!-- Path 2 -->
+  <rect x="24" y="268" width="912" height="148" rx="10" fill="#122228" stroke="#8ab4b8" stroke-width="1.5"/>
+  <text x="42" y="288" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="11" font-weight="700">Parallel team - incremental from 6/1/2026 (Bronze to Silver to Gold)</text>
+
+  <rect x="42" y="302" width="120" height="68" rx="8" fill="#2a1f1d" stroke="#888"/>
+  <text x="102" y="328" text-anchor="middle" fill="#ccc" font-family="Segoe UI,sans-serif" font-size="11" font-weight="600">NiFi flows</text>
+  <text x="102" y="346" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="9">to notebooks</text>
+
+  <path d="M162,336 L208,336" stroke="#FF3621" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <rect x="208" y="312" width="82" height="48" rx="8" fill="#2d4a52" stroke="#c4a35a" stroke-width="2"/>
+  <text x="249" y="342" text-anchor="middle" fill="#fff" font-family="Segoe UI,sans-serif" font-size="11">Bronze</text>
+
+  <path d="M290,336 L336,336" stroke="#FF3621" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <rect x="336" y="312" width="82" height="48" rx="8" fill="#2d4a52" stroke="#c0c0c0" stroke-width="2"/>
+  <text x="377" y="342" text-anchor="middle" fill="#fff" font-family="Segoe UI,sans-serif" font-size="11">Silver</text>
+
+  <!-- Silver to shared Gold: silver L-shaped line (horizontal then north) -->
+  <path d="M418,336 L825,336 L825,190" stroke="#c0c0c0" stroke-width="2.5" fill="none" marker-end="url(#arr-silver)"/>
+  <text x="620" y="324" text-anchor="middle" fill="#c0c0c0" font-family="Segoe UI,sans-serif" font-size="9">Silver to Gold (incremental append)</text>
+
+  <!-- Animated particles -->
+  <circle r="4" fill="#00A972">
+    <animateMotion dur="3.2s" repeatCount="indefinite" path="M142,118 L168,118 L168,149 L416,149 L760,149"/>
+  </circle>
+  <circle r="4" fill="#FF3621">
+    <animateMotion dur="3.2s" repeatCount="indefinite" begin="0.4s" path="M142,180 L168,180 L168,149 L416,149 L760,149"/>
+  </circle>
+  <circle r="4" fill="#FF3621">
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.8s" path="M102,336 L249,336 L377,336 L418,336"/>
+  </circle>
+  <circle r="4" fill="#c0c0c0">
+    <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.6s" path="M418,336 L825,336 L825,190"/>
+  </circle>
+
+  <rect x="24" y="430" width="912" height="72" rx="6" fill="#122228" stroke="#2d4a52"/>
+  <text x="480" y="452" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="10">
+    Rupert: custom notebook ingests Thailand + Snowball files (parquet/csv/txt/json) via Merge, Append, ReplaceWhere
+  </text>
+  <text x="480" y="468" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="10">
+    650+ Gold tables (0.0001 GB - 150 TB each) loaded straight to Gold - mirrors Hadoop
+  </text>
+  <text x="480" y="486" text-anchor="middle" fill="#666" font-family="Segoe UI,sans-serif" font-size="9">
+    Parallel team: NiFi to Bronze to Silver, then silver L-line to shared Gold from 6/1/2026
+  </text>
+</svg>

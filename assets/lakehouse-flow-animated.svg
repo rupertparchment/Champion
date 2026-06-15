@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-label="Lakehouse pipeline with Snowflake Gold mirror">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B3139"/>
+      <stop offset="100%" stop-color="#0f1f24"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#FF3621"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#FF5F46"/>
+    </marker>
+    <marker id="arrow-snow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#29B5E8"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="980" height="500" fill="url(#bg)" rx="12"/>
+  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Accenture Federal - DoD Lakehouse Pipeline</text>
+  <text x="490" y="56" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="11">Public Trust | Gold mirrored to Snowflake | Delta time travel (not full UC)</text>
+
+  <!-- LEFT COLUMN -->
+  <g font-family="Segoe UI, sans-serif" font-size="11" fill="#e8f4f5">
+    <rect x="36" y="72" width="118" height="44" rx="8" fill="#243a42" stroke="#00A972" stroke-width="1.5"/>
+    <text x="95" y="92" text-anchor="middle">Sources</text>
+    <text x="95" y="108" text-anchor="middle" fill="#8ab4b8" font-size="10">API / DB / Files</text>
+
+    <rect x="36" y="128" width="118" height="44" rx="8" fill="#243a42" stroke="#7ec8e3" stroke-width="1.5"/>
+    <text x="95" y="148" text-anchor="middle">Streaming</text>
+    <text x="95" y="164" text-anchor="middle" fill="#8ab4b8" font-size="10">Events / CDC</text>
+
+    <text x="95" y="188" text-anchor="middle" fill="#FF5F46" font-size="9" font-weight="600">SALESFORCE INGEST (Accenture)</text>
+
+    <rect x="36" y="196" width="118" height="32" rx="6" fill="#2a1f1d" stroke="#FF3621" stroke-width="1.5"/>
+    <text x="95" y="216" text-anchor="middle" font-size="10">Salesforce API</text>
+
+    <rect x="36" y="236" width="118" height="32" rx="6" fill="#243a42" stroke="#7ec8e3" stroke-width="1.5"/>
+    <text x="95" y="252" text-anchor="middle" font-size="10">ADF (Azure)</text>
+
+    <rect x="36" y="276" width="118" height="32" rx="6" fill="#243a42" stroke="#FF3621" stroke-width="1.5"/>
+    <text x="95" y="296" text-anchor="middle" font-size="10">S3 Bucket</text>
+
+    <rect x="36" y="316" width="118" height="32" rx="6" fill="#1e3339" stroke="#c4a35a" stroke-width="1.5"/>
+    <text x="95" y="336" text-anchor="middle" fill="#ffd700" font-size="10">Databricks Notebook</text>
+  </g>
+
+  <line x1="210" y1="94" x2="210" y2="176" stroke="#3d5a62" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="210" cy="176" r="4" fill="#00A972"/>
+
+  <!-- Databricks Lakehouse -->
+  <rect x="220" y="110" width="500" height="190" rx="12" fill="#1e3339" stroke="#FF3621" stroke-width="2" stroke-dasharray="6 4" opacity="0.95"/>
+  <text x="470" y="132" text-anchor="middle" fill="#FF5F46" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">Databricks Lakehouse</text>
+  <text x="470" y="146" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="9">DoD: Delta time travel (not full UC) | Snowflake Gold mirror</text>
+
+  <g font-family="Segoe UI, sans-serif" font-size="12" fill="#fff">
+    <rect x="248" y="148" width="118" height="56" rx="8" fill="#2d4a52" stroke="#c4a35a" stroke-width="2"/>
+    <text x="307" y="172" text-anchor="middle">Bronze</text>
+    <text x="307" y="188" text-anchor="middle" fill="#ffd700" font-size="10">Managed Table</text>
+
+    <rect x="388" y="148" width="108" height="56" rx="8" fill="#2d4a52" stroke="#c0c0c0" stroke-width="2"/>
+    <text x="442" y="178" text-anchor="middle">Silver</text>
+
+    <rect x="518" y="148" width="108" height="56" rx="8" fill="#2d4a52" stroke="#ffd700" stroke-width="2"/>
+    <text x="572" y="172" text-anchor="middle">Gold</text>
+    <text x="572" y="188" text-anchor="middle" fill="#8ab4b8" font-size="9">Databricks Delta</text>
+  </g>
+
+  <rect x="330" y="228" width="280" height="36" rx="8" fill="#243a42" stroke="#00A972" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="470" y="250" text-anchor="middle" fill="#00A972" font-family="Segoe UI, sans-serif" font-size="10">Metadata Framework / Jobs / DLT</text>
+
+  <!-- Snowflake Gold mirror (Accenture Federal - DoD) -->
+  <rect x="740" y="118" width="200" height="100" rx="10" fill="#1a2830" stroke="#29B5E8" stroke-width="2"/>
+  <text x="840" y="140" text-anchor="middle" fill="#29B5E8" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600">Snowflake</text>
+  <text x="840" y="158" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="9">Accenture Federal - DoD</text>
+
+  <rect x="760" y="168" width="160" height="40" rx="8" fill="#243a42" stroke="#29B5E8" stroke-width="2"/>
+  <text x="840" y="186" text-anchor="middle" fill="#fff" font-size="11">Gold (Snowflake)</text>
+  <text x="840" y="200" text-anchor="middle" fill="#29B5E8" font-size="9">mirrors Databricks Gold</text>
+
+  <!-- Consumers -->
+  <g font-family="Segoe UI, sans-serif" font-size="11" fill="#e8f4f5">
+    <rect x="80" y="378" width="130" height="48" rx="8" fill="#243a42" stroke="#00A972" stroke-width="2"/>
+    <text x="145" y="406" text-anchor="middle">BI / SQL</text>
+
+    <rect x="250" y="378" width="130" height="48" rx="8" fill="#243a42" stroke="#7ec8e3" stroke-width="2"/>
+    <text x="315" y="406" text-anchor="middle">Data Science</text>
+
+    <rect x="420" y="378" width="130" height="48" rx="8" fill="#243a42" stroke="#FF3621" stroke-width="2"/>
+    <text x="485" y="406" text-anchor="middle">GenAI</text>
+
+    <rect x="590" y="378" width="130" height="48" rx="8" fill="#243a42" stroke="#ffd700" stroke-width="2"/>
+    <text x="655" y="406" text-anchor="middle">Ops / Alerts</text>
+
+    <rect x="760" y="378" width="160" height="48" rx="8" fill="#243a42" stroke="#29B5E8" stroke-width="2"/>
+    <text x="840" y="400" text-anchor="middle">DoD Analytics</text>
+    <text x="840" y="416" text-anchor="middle" fill="#8ab4b8" font-size="9">Snowflake consumers</text>
+  </g>
+
+  <!-- Ingest + medallion arrows (no marker on Gold vertical - balls pass through) -->
+  <g stroke="#5a8a94" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <path d="M154,94 L210,94 L210,176 L248,176"/>
+    <path d="M154,150 L210,150 L210,176"/>
+    <path d="M366,176 L388,176"/>
+    <path d="M496,176 L518,176"/>
+    <path d="M572,328 L145,406"/>
+    <path d="M572,328 L315,406"/>
+    <path d="M572,328 L485,406"/>
+    <path d="M572,328 L655,406"/>
+  </g>
+  <path d="M572,204 L572,328" stroke="#5a8a94" stroke-width="2.5" fill="none"/>
+
+  <!-- Gold mirror to Snowflake (Accenture DoD) -->
+  <g stroke="#29B5E8" stroke-width="2.5" fill="none" stroke-dasharray="6 4" marker-end="url(#arrow-snow)">
+    <path d="M626,176 L760,176"/>
+    <path d="M840,208 L840,378"/>
+  </g>
+
+  <!-- Salesforce chain -->
+  <g stroke="#FF5F46" stroke-width="2.5" fill="none" marker-end="url(#arrow-red)">
+    <path d="M95,228 L95,236"/>
+    <path d="M95,268 L95,276"/>
+    <path d="M95,308 L95,316"/>
+    <path d="M154,332 L175,332 L175,200 L248,200"/>
+  </g>
+
+  <g stroke="#00A972" stroke-width="1.5" fill="none" stroke-dasharray="5 4" opacity="0.6">
+    <path d="M470,228 L470,204 L442,204"/>
+    <path d="M470,228 L470,204 L307,204"/>
+    <path d="M470,228 L470,204 L572,204"/>
+  </g>
+
+  <circle cx="572" cy="328" r="4" fill="#5a8a94" opacity="0.5"/>
+
+  <!-- Green: Sources to BI/SQL -->
+  <circle r="5" fill="#00A972" filter="url(#glow)">
+    <animateMotion dur="5.5s" repeatCount="indefinite"
+      path="M154,94 L210,94 L210,176 L248,176 L366,176 L388,176 L496,176 L518,176 L572,176 L572,204 L572,328 L145,406"/>
+  </circle>
+
+  <!-- Blue: Streaming to Data Science -->
+  <circle r="5" fill="#7ec8e3" filter="url(#glow)">
+    <animateMotion dur="5.5s" repeatCount="indefinite" begin="0.7s"
+      path="M154,150 L210,150 L210,176 L248,176 L366,176 L388,176 L496,176 L518,176 L572,176 L572,204 L572,328 L315,406"/>
+  </circle>
+
+  <!-- Red: Salesforce to GenAI -->
+  <circle r="5" fill="#FF3621" filter="url(#glow)">
+    <animateMotion dur="7s" repeatCount="indefinite" begin="1.3s"
+      path="M95,212 L95,252 L95,292 L95,332 L154,332 L175,332 L175,200 L248,200 L248,176 L366,176 L388,176 L496,176 L518,176 L572,176 L572,204 L572,328 L485,406"/>
+  </circle>
+
+  <!-- Gold: Databricks Gold down to junction, then to Ops / Alerts -->
+  <circle r="5" fill="#ffd700" filter="url(#glow)">
+    <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s"
+      path="M572,176 L572,328 L655,406"/>
+  </circle>
+
+  <!-- Snowflake mirror sync (Accenture DoD) -->
+  <circle r="4" fill="#29B5E8" filter="url(#glow)">
+    <animateMotion dur="3s" repeatCount="indefinite" begin="0.5s"
+      path="M626,176 L760,176 L840,188 L840,378"/>
+  </circle>
+
+  <g font-family="Segoe UI, sans-serif" font-size="10" fill="#8ab4b8">
+    <rect x="30" y="448" width="920" height="32" rx="6" fill="#122228" stroke="#2d4a52"/>
+    <text x="490" y="468" text-anchor="middle">
+      Accenture Federal (DoD): Databricks Gold duplicated to Snowflake Gold | Blue line = mirror publish path
+    </text>
+  </g>
+</svg>

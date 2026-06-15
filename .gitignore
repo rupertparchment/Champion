@@ -1,0 +1,16 @@
+# Private / rehearsal (not for public site)
+SPEAKER-NOTES.md
+
+# Office docs and decks (keep local)
+*.pptx
+*.pptx.bak
+*.pdf
+*.docx
+*.emf
+
+# Build scripts (optional local tooling)
+*.py
+CONTENT.yaml
+
+# PPT extraction artifacts
+assets/ppt_embeddings_*
