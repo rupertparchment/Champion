@@ -192,20 +192,6 @@
     .reveal .slide-liquid-clustering ul li::before { width: 5px; height: 5px; top: 0.48em; }
     .reveal .slide-liquid-clustering .panel-line { margin-top: 0.4em; font-size: 0.52em !important; padding: 0.38em 0.6em; max-width: 100%; width: 100%; }
 
-    .reveal .slide-kudu-serverless { overflow-y: hidden !important; padding: 0.6em 1.05em 0.65em !important; }
-    .reveal .slide-kudu-serverless h2 { font-size: 1.05em; }
-    .reveal .slide-kudu-serverless h2::after { margin: 0.16em 0 0.28em; }
-    .reveal .slide-kudu-serverless .intro-frame { padding: 0.5rem 0.6rem; max-width: 100%; }
-    .reveal .slide-kudu-serverless .kudu-intro { font-size: 0.56em !important; margin: 0 0 0.35em !important; line-height: 1.25; }
-    .reveal .slide-kudu-serverless .card { padding: 0.4rem 0.5rem; max-width: 100%; margin: 0; text-align: left; }
-    .reveal .slide-kudu-serverless .card h3 { font-size: 0.8em; margin: 0 0 0.2em; line-height: 1.15; }
-    .reveal .slide-kudu-serverless ul { font-size: 0.64em; }
-    .reveal .slide-kudu-serverless ul li { margin-bottom: 0.12em; line-height: 1.18; padding-left: 1.1em; }
-    .reveal .slide-kudu-serverless ul li::before { width: 5px; height: 5px; top: 0.48em; }
-    .reveal .slide-kudu-serverless code { font-size: 0.88em; }
-    .reveal .slide-kudu-serverless .panel-line { margin-top: 0.4em; font-size: 0.52em !important; padding: 0.38em 0.6em; max-width: 100%; width: 100%; }
-    .reveal .slide-kudu-serverless .kudu-hint { font-size: 0.5em !important; margin: 0.35em 0 0 !important; color: #8ab4b8; }
-
     /* Sparse slides: vertically center block so content is not pinned to top with empty bottom */
     .reveal .slide-sparse {
       overflow-y: hidden !important;
@@ -641,7 +627,7 @@
 
                 <li>MDFSG metadata framework · commercial UC</li>
 
-                <li><strong>Liquid Clustering</strong> post-cutover · <strong>KUDU/Serverless</strong> escalated</li>
+                <li><strong>Liquid Clustering</strong> on Gold post-cutover</li>
 
               </ul>
 
@@ -933,7 +919,7 @@
 
         </div>
 
-        <p class="panel-line">Post 6/1/2026: <strong>Liquid Clustering</strong> on Gold · see next slides for latest tech + migration lessons</p>
+        <p class="panel-line">Post 6/1/2026: <strong>Liquid Clustering</strong> on Gold - see next slide</p>
 
       </section>
 
@@ -990,81 +976,6 @@
         <p class="panel-line">Panel line: staged latest tech deliberately - mirror first, optimize once incremental workloads were real.</p>
 
       </section>
-
-
-
-      <section>
-
-        <section class="content-slide slide-bp slide-compact slide-kudu-serverless">
-
-          <h2><span class="tag tag-bp">Blueprint</span> KUDU &amp; Serverless <span class="small">(1/2)</span></h2>
-
-          <p class="small kudu-intro">~Mar/Apr 2026 - switched to <strong>Serverless</strong> for cost - no issue on <strong>APC</strong> (all-purpose clusters)</p>
-
-          <div class="intro-frame">
-
-            <div class="card" style="border-top:3px solid #FF5F46;">
-
-              <h3 class="accent" style="color:#FF5F46;">Silent failure on Serverless</h3>
-
-              <ul>
-
-                <li>Legacy <strong>Hadoop / Impala / KUDU</strong> parquet ingest from migration paths</li>
-
-                <li><strong>Serverless:</strong> parquet files <strong>skipped</strong> but job reported <strong>success</strong></li>
-
-                <li>No <strong>bad records</strong> path - not flagged <strong>corrupt</strong></li>
-
-                <li><code>schemaEvolutionMode "rescue"</code> did not surface missing data</li>
-
-                <li>Same logic on <strong>APC</strong> - <strong>no issue</strong></li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-          <p class="small kudu-hint">Down arrow for response and lesson</p>
-
-        </section>
-
-
-
-        <section class="content-slide slide-bp slide-compact slide-kudu-serverless">
-
-          <h2><span class="tag tag-bp">Blueprint</span> KUDU &amp; Serverless <span class="small">(2/2)</span></h2>
-
-          <div class="intro-frame">
-
-            <div class="card card-bp">
-
-              <h3 class="accent" style="color:#ffd700;">Response &amp; lesson</h3>
-
-              <ul>
-
-                <li>Found via <strong>row counts / file coverage</strong> validation after Serverless cutover</li>
-
-                <li>Reproduced Serverless vs APC - escalated via <strong>Databricks Partner</strong> channel</li>
-
-                <li><strong>Databricks engineering engaged</strong> - platform resolution in progress</li>
-
-                <li>Interim: critical ingest back on <strong>APC</strong> until Serverless parity confirmed</li>
-
-                <li><strong>Lesson:</strong> green job status is not enough - validate data quality on cutover</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-          <p class="panel-line">Serverless showed success while parquet was silently dropped - APC worked; rescue and bad-records gave no signal.</p>
-
-        </section>
-
-      </section>
-
 
 
       <section class="content-slide slide-bp slide-compact slide-sparse">
