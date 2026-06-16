@@ -168,6 +168,15 @@
     .reveal .slide-governance .governance-cols { font-size: 0.68em; gap: 0.5rem; }
     .reveal .slide-governance .panel-line { flex-shrink: 0; max-width: 920px; width: 100%; }
 
+    .reveal .slide-business-context { overflow-y: hidden !important; padding: 0.6em 1.05em 0.65em !important; }
+    .reveal .slide-business-context h2 { font-size: 1.05em; }
+    .reveal .slide-business-context h2::after { margin: 0.16em 0 0.28em; }
+    .reveal .slide-business-context .intro-frame { padding: 0.5rem 0.6rem; max-width: 100%; }
+    .reveal .slide-business-context .card { padding: 0.4rem 0.5rem; }
+    .reveal .slide-business-context ul { font-size: 0.64em; margin: 0; }
+    .reveal .slide-business-context ul li { margin-bottom: 0.12em; line-height: 1.18; padding-left: 1.1em; }
+    .reveal .slide-business-context ul li::before { width: 5px; height: 5px; top: 0.48em; }
+
     .reveal .slide-nxp-roles { overflow-y: hidden !important; padding: 0.6em 1.05em 0.65em !important; }
     .reveal .slide-nxp-roles h2 { font-size: 1.05em; }
     .reveal .slide-nxp-roles h2::after { margin: 0.16em 0 0.28em; }
@@ -693,7 +702,7 @@
 
 
 
-      <section class="content-slide slide-compact slide-dod">
+      <section class="content-slide slide-compact slide-dod slide-business-context">
 
         <h2><span class="tag tag-dod">Accenture</span> Business Context</h2>
 
@@ -701,17 +710,17 @@
 
           <div class="card card-dod">
 
-        <ul>
+            <ul>
 
-          <li>Federal / <strong>DoD</strong> analytics at scale — strict compliance and accreditation</li>
+              <li>Federal / <strong>DoD</strong> analytics at scale - strict compliance and accreditation</li>
 
-          <li>Legacy silos; need governed medallion on Databricks with downstream consumption in <strong>Snowflake</strong></li>
+              <li>Legacy silos - governed medallion on Databricks, downstream consumption in <strong>Snowflake</strong></li>
 
-          <li><strong>Government cloud:</strong> Unity Catalog limited or unavailable — design for <strong>Delta time travel</strong> and platform controls instead</li>
+              <li><strong>Gov cloud:</strong> Unity Catalog limited - design for <strong>Delta time travel</strong> and platform controls</li>
 
-          <li>High-volume ingest: <strong>100B+ rows in one week</strong> with ADF quality gates</li>
+              <li>High-volume ingest: <strong>100B+ rows in one week</strong> with ADF quality gates</li>
 
-        </ul>
+            </ul>
 
           </div>
 
