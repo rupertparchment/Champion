@@ -21,7 +21,7 @@ All deliverables for your **45-minute panel / peer review** live in this folder.
 | Opening | 0–3 | Title, intro, **Two Stories** agenda, journey |
 | **Story 1** | 4–8 | **Accenture Federal / DoD** — architecture, gov governance, impact |
 | **Story 2** | 9–16 | **Blueprint / Partner** — semiconductor client, **Liquid Clustering**, MDFSG |
-| Closing | 19–23 | Why Lakehouse, features, community, thank you |
+| Closing | 17–20 | Data Intelligence Platform, features, community, thank you |
 
 See **`SPEAKER-NOTES.md`** for ~10 min + ~12 min timing per story.
 
