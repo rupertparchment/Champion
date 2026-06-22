@@ -21,7 +21,7 @@
   </defs>
 
   <rect width="980" height="500" fill="url(#bg)" rx="12"/>
-  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">DoD Pipeline</text>
+  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700">DoD Data Intelligence Platform</text>
   <text x="490" y="56" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="11">Public Trust | Gold mirrored to Snowflake | Delta time travel (not full UC)</text>
 
   <!-- LEFT COLUMN -->
