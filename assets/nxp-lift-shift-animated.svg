@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-label="Semiconductor client migration - historical ingest notebook to Gold">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-label="Microprocessor manufacturer migration - historical ingest notebook to Gold">
   <defs>
     <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
       <path d="M0,0 L6,3 L0,6 Z" fill="#FF3621"/>
@@ -15,7 +15,7 @@
     </marker>
   </defs>
   <rect width="960" height="520" fill="#1B3139" rx="12"/>
-  <text x="480" y="28" text-anchor="middle" fill="#FF3621" font-family="Segoe UI,sans-serif" font-size="19" font-weight="700">Semiconductor Client - Two Migration Paths</text>
+  <text x="480" y="28" text-anchor="middle" fill="#FF3621" font-family="Segoe UI,sans-serif" font-size="19" font-weight="700">Microprocessor Manufacturer - Two Migration Paths</text>
   <text x="480" y="48" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI,sans-serif" font-size="10">Historical ingest notebook (Rupert) + parallel Bronze-Silver-Gold from 6/1/2026</text>
 
   <!-- Path 1 -->
