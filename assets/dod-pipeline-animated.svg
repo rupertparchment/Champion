@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-label="DoD Pipeline with Snowflake Gold mirror">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-label="DoD Data Intelligence Platform with Snowflake Gold mirror">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#1B3139"/>
@@ -136,34 +136,43 @@
   <circle cx="572" cy="328" r="4" fill="#5a8a94" opacity="0.5"/>
 
   <!-- Green: Sources to BI/SQL -->
-  <circle r="5" fill="#00A972" filter="url(#glow)">
-    <animateMotion dur="5.5s" repeatCount="indefinite"
+  <g filter="url(#glow)">
+    <circle r="5" fill="#00A972"/>
+    <animateMotion dur="5.5s" repeatCount="indefinite" calcMode="linear"
       path="M154,94 L210,94 L210,176 L248,176 L366,176 L388,176 L496,176 L518,176 L572,176 L572,204 L572,328 L145,406"/>
-  </circle>
+  </g>
 
   <!-- Blue: Streaming to Data Science -->
-  <circle r="5" fill="#7ec8e3" filter="url(#glow)">
-    <animateMotion dur="5.5s" repeatCount="indefinite" begin="0.7s"
+  <g filter="url(#glow)" visibility="hidden">
+    <set attributeName="visibility" to="visible" begin="0.7s"/>
+    <circle r="5" fill="#7ec8e3"/>
+    <animateMotion dur="5.5s" repeatCount="indefinite" begin="0.7s" calcMode="linear"
       path="M154,150 L210,150 L210,176 L248,176 L366,176 L388,176 L496,176 L518,176 L572,176 L572,204 L572,328 L315,406"/>
-  </circle>
+  </g>
 
   <!-- Red: Salesforce to GenAI -->
-  <circle r="5" fill="#FF3621" filter="url(#glow)">
-    <animateMotion dur="7s" repeatCount="indefinite" begin="1.3s"
+  <g filter="url(#glow)" visibility="hidden">
+    <set attributeName="visibility" to="visible" begin="1.3s"/>
+    <circle r="5" fill="#FF3621"/>
+    <animateMotion dur="7s" repeatCount="indefinite" begin="1.3s" calcMode="linear"
       path="M95,212 L95,252 L95,292 L95,332 L154,332 L175,332 L175,200 L248,200 L248,176 L366,176 L388,176 L496,176 L518,176 L572,176 L572,204 L572,328 L485,406"/>
-  </circle>
+  </g>
 
   <!-- Gold: Databricks Gold down to junction, then to Ops / Alerts -->
-  <circle r="5" fill="#ffd700" filter="url(#glow)">
-    <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s"
+  <g filter="url(#glow)" visibility="hidden">
+    <set attributeName="visibility" to="visible" begin="2s"/>
+    <circle r="5" fill="#ffd700"/>
+    <animateMotion dur="3.5s" repeatCount="indefinite" begin="2s" calcMode="linear"
       path="M572,176 L572,328 L655,406"/>
-  </circle>
+  </g>
 
   <!-- Snowflake mirror sync (DoD Migration) -->
-  <circle r="4" fill="#29B5E8" filter="url(#glow)">
-    <animateMotion dur="3s" repeatCount="indefinite" begin="0.5s"
+  <g filter="url(#glow)" visibility="hidden">
+    <set attributeName="visibility" to="visible" begin="0.5s"/>
+    <circle r="4" fill="#29B5E8"/>
+    <animateMotion dur="3s" repeatCount="indefinite" begin="0.5s" calcMode="linear"
       path="M626,176 L760,176 L840,188 L840,378"/>
-  </circle>
+  </g>
 
   <g font-family="Segoe UI, sans-serif" font-size="10" fill="#8ab4b8">
     <rect x="30" y="448" width="920" height="32" rx="6" fill="#122228" stroke="#2d4a52"/>
