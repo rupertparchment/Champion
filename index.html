@@ -211,11 +211,12 @@
     .reveal .slide-nxp-roles h2 { font-size: 1.05em; }
     .reveal .slide-nxp-roles h2::after { margin: 0.16em 0 0.28em; }
     .reveal .slide-nxp-roles .intro-frame { padding: 0.5rem 0.6rem; max-width: 100%; }
-    .reveal .slide-nxp-roles .nxp-three-cols { font-size: 0.58em; gap: 0.4rem; grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    .reveal .slide-nxp-roles .nxp-three-cols { font-size: 0.55em; gap: 0.38rem; grid-template-columns: 1fr 1fr 1fr; align-items: start; }
     .reveal .slide-nxp-roles .nxp-three-cols .card { padding: 0.38rem 0.42rem; height: auto; overflow: visible; }
     .reveal .slide-nxp-roles .nxp-three-cols .card h3 { font-size: 0.86em; margin: 0 0 0.18em; line-height: 1.12; }
     .reveal .slide-nxp-roles .nxp-three-cols ul li { margin-bottom: 0.08em; font-size: 0.9em; line-height: 1.14; padding-left: 1.1em; }
     .reveal .slide-nxp-roles .nxp-three-cols ul li::before { width: 5px; height: 5px; top: 0.48em; }
+    .reveal .slide-nxp-roles .panel-line { flex-shrink: 0; max-width: 100%; width: 100%; font-size: 0.5em !important; margin-top: 0.35em; }
 
     .reveal .slide-liquid-clustering { overflow-y: hidden !important; padding: 0.6em 1.05em 0.65em !important; }
     .reveal .slide-liquid-clustering h2 { font-size: 1.05em; }
@@ -919,6 +920,8 @@
 
                 <li>Customer requested we keep the <strong>exact partition implementation</strong> as in Hadoop</li>
 
+                <li><strong>Liquid Clustering deferred</strong> during bulk — mirror Hadoop first, optimize post-cutover</li>
+
                 <li>Parallel team: NiFi → notebooks, <strong>Bronze → Silver → Gold</strong> day-forward from cutover</li>
 
               </ul>
@@ -933,7 +936,9 @@
 
                 <li><strong>MDFSG metadata framework</strong> — new Silver/Gold tables from a <strong>metadata row</strong>, not new pipeline code</li>
 
-                <li><strong>Liquid Clustering</strong> on Gold post-cutover (replaces static partitioning)</li>
+                <li><strong>Liquid Clustering</strong> on Gold post-cutover — replaces static Hadoop partitioning</li>
+
+                <li>Better fit for <strong>650+ tables</strong> (0.0001 GB – 150 TB) once incremental workloads were live</li>
 
                 <li><strong>Unity Catalog</strong> + <strong>asset bundles</strong> for governed commercial deployments</li>
 
@@ -944,6 +949,8 @@
           </div>
 
         </div>
+
+        <p class="panel-line">Staged latest tech deliberately — mirror Hadoop first, apply <strong>Liquid Clustering</strong> once incremental <strong>Bronze → Silver → Gold</strong> was live</p>
 
       </section>
 
@@ -981,63 +988,10 @@
 
         </div>
 
-        <p class="panel-line">Post-cutover: <strong>Liquid Clustering</strong> on Gold - see next slide</p>
+        <p class="panel-line">Post-cutover: <strong>Liquid Clustering</strong> on Gold replaced static partitioning</p>
 
       </section>
 
-
-
-      <section class="content-slide slide-bp slide-compact slide-liquid-clustering">
-
-        <h2><span class="tag tag-bp">Blueprint</span> Latest Tech - Liquid Clustering</h2>
-
-        <div class="intro-frame">
-
-          <div class="two-col lc-cols">
-
-            <div class="card card-dod" style="border-top-color:#888;">
-
-              <h3 class="accent" style="color:#888;">Why NOT during historical bulk load</h3>
-
-              <ul>
-
-                <li><strong>650+ Gold tables</strong> had to <strong>mirror Hadoop</strong> for cutover validation</li>
-
-                <li><strong>2+ PB</strong> one-time load - inherited partitioning, proven write paths</li>
-
-                <li>Clustering keys need day-forward access patterns, not bulk backfill</li>
-
-                <li>Physical layout change mid-migration added risk with no incremental benefit</li>
-
-              </ul>
-
-            </div>
-
-            <div class="card card-bp">
-
-              <h3 class="accent" style="color:#ffd700;">Why post-cutover (implemented)</h3>
-
-              <ul>
-
-                <li>Incremental <strong>Bronze to Silver to Gold</strong> live - ongoing writes and queries</li>
-
-                <li><strong>Liquid Clustering</strong> replaced regular partitioning on Gold</li>
-
-                <li>Better fit for <strong>650+ tables</strong> (0.0001 GB - 150 TB) and evolving filters</li>
-
-                <li>Post-cutover optimization - latest Delta features when workloads were real</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <p class="panel-line">Panel line: staged latest tech deliberately - mirror first, optimize once incremental workloads were real.</p>
-
-      </section>
 
 
       <section class="content-slide slide-bp slide-compact slide-sparse">
