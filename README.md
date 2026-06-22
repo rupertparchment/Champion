@@ -20,8 +20,8 @@ All deliverables for your **45-minute panel / peer review** live in this folder.
 |---------|--------|---------|
 | Opening | 0–3 | Title, intro, **Two Stories** agenda, journey |
 | **Story 1** | 4–8 | **DoD Migration** — architecture, gov governance, impact |
-| **Story 2** | 9–16 | **Blueprint / Partner** — microprocessor manufacturer, **Liquid Clustering**, MDFSG |
-| Closing | 17–20 | Data Intelligence Platform, features, community, thank you |
+| **Story 2** | 9–14 | **Microprocessor manufacturer** — migration, MDFSG flow & impact |
+| Closing | 15–18 | Data Intelligence Platform, features, community, thank you |
 
 See **`SPEAKER-NOTES.md`** for ~10 min + ~12 min timing per story.
 
