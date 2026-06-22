@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-label="Lakehouse pipeline with Snowflake Gold mirror">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-label="Data Intelligence Platform pipeline with Snowflake Gold mirror">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#1B3139"/>
@@ -21,7 +21,7 @@
   </defs>
 
   <rect width="980" height="500" fill="url(#bg)" rx="12"/>
-  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">DoD Migration - Lakehouse Pipeline</text>
+  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">DoD Migration - Data Intelligence Platform</text>
   <text x="490" y="56" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="11">Public Trust | Gold mirrored to Snowflake | Delta time travel (not full UC)</text>
 
   <!-- LEFT COLUMN -->
@@ -52,9 +52,9 @@
   <line x1="210" y1="94" x2="210" y2="176" stroke="#3d5a62" stroke-width="2" stroke-dasharray="4 3"/>
   <circle cx="210" cy="176" r="4" fill="#00A972"/>
 
-  <!-- Databricks Lakehouse -->
+  <!-- Data Intelligence Platform -->
   <rect x="220" y="110" width="500" height="190" rx="12" fill="#1e3339" stroke="#FF3621" stroke-width="2" stroke-dasharray="6 4" opacity="0.95"/>
-  <text x="470" y="132" text-anchor="middle" fill="#FF5F46" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600">Databricks Lakehouse</text>
+  <text x="470" y="132" text-anchor="middle" fill="#FF5F46" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600">Data Intelligence Platform</text>
   <text x="470" y="146" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="9">DoD: Delta time travel (not full UC) | Snowflake Gold mirror</text>
 
   <g font-family="Segoe UI, sans-serif" font-size="12" fill="#fff">
@@ -73,7 +73,7 @@
   <rect x="330" y="228" width="280" height="36" rx="8" fill="#243a42" stroke="#00A972" stroke-width="1.5" stroke-dasharray="4 3"/>
   <text x="470" y="250" text-anchor="middle" fill="#00A972" font-family="Segoe UI, sans-serif" font-size="10">Metadata Framework / Jobs / DLT</text>
 
-  <!-- Snowflake Gold mirror (Accenture Federal - DoD) -->
+  <!-- Snowflake Gold mirror (DoD Migration) -->
   <rect x="740" y="118" width="200" height="100" rx="10" fill="#1a2830" stroke="#29B5E8" stroke-width="2"/>
   <text x="840" y="140" text-anchor="middle" fill="#29B5E8" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600">Snowflake</text>
   <text x="840" y="158" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="9">DoD Migration</text>
@@ -114,7 +114,7 @@
   </g>
   <path d="M572,204 L572,328" stroke="#5a8a94" stroke-width="2.5" fill="none"/>
 
-  <!-- Gold mirror to Snowflake (Accenture DoD) -->
+  <!-- Gold mirror to Snowflake (DoD Migration) -->
   <g stroke="#29B5E8" stroke-width="2.5" fill="none" stroke-dasharray="6 4" marker-end="url(#arrow-snow)">
     <path d="M626,176 L760,176"/>
     <path d="M840,208 L840,378"/>
@@ -160,7 +160,7 @@
       path="M572,176 L572,328 L655,406"/>
   </circle>
 
-  <!-- Snowflake mirror sync (Accenture DoD) -->
+  <!-- Snowflake mirror sync (DoD Migration) -->
   <circle r="4" fill="#29B5E8" filter="url(#glow)">
     <animateMotion dur="3s" repeatCount="indefinite" begin="0.5s"
       path="M626,176 L760,176 L840,188 L840,378"/>
