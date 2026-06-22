@@ -21,7 +21,7 @@
   </defs>
 
   <rect width="980" height="500" fill="url(#bg)" rx="12"/>
-  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Accenture Federal - DoD Lakehouse Pipeline</text>
+  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">DoD Migration - Lakehouse Pipeline</text>
   <text x="490" y="56" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="11">Public Trust | Gold mirrored to Snowflake | Delta time travel (not full UC)</text>
 
   <!-- LEFT COLUMN -->
@@ -34,7 +34,7 @@
     <text x="95" y="148" text-anchor="middle">Streaming</text>
     <text x="95" y="164" text-anchor="middle" fill="#8ab4b8" font-size="10">Events / CDC</text>
 
-    <text x="95" y="188" text-anchor="middle" fill="#FF5F46" font-size="9" font-weight="600">SALESFORCE INGEST (Accenture)</text>
+    <text x="95" y="188" text-anchor="middle" fill="#FF5F46" font-size="9" font-weight="600">SALESFORCE INGEST (DoD Migration)</text>
 
     <rect x="36" y="196" width="118" height="32" rx="6" fill="#2a1f1d" stroke="#FF3621" stroke-width="1.5"/>
     <text x="95" y="216" text-anchor="middle" font-size="10">Salesforce API</text>
@@ -76,7 +76,7 @@
   <!-- Snowflake Gold mirror (Accenture Federal - DoD) -->
   <rect x="740" y="118" width="200" height="100" rx="10" fill="#1a2830" stroke="#29B5E8" stroke-width="2"/>
   <text x="840" y="140" text-anchor="middle" fill="#29B5E8" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600">Snowflake</text>
-  <text x="840" y="158" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="9">Accenture Federal - DoD</text>
+  <text x="840" y="158" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="9">DoD Migration</text>
 
   <rect x="760" y="168" width="160" height="40" rx="8" fill="#243a42" stroke="#29B5E8" stroke-width="2"/>
   <text x="840" y="186" text-anchor="middle" fill="#fff" font-size="11">Gold (Snowflake)</text>
@@ -169,7 +169,7 @@
   <g font-family="Segoe UI, sans-serif" font-size="10" fill="#8ab4b8">
     <rect x="30" y="448" width="920" height="32" rx="6" fill="#122228" stroke="#2d4a52"/>
     <text x="490" y="468" text-anchor="middle">
-      Accenture Federal (DoD): Databricks Gold duplicated to Snowflake Gold | Blue line = mirror publish path
+      DoD Migration: Databricks Gold duplicated to Snowflake Gold | Blue line = mirror publish path
     </text>
   </g>
 </svg>

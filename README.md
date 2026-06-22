@@ -19,7 +19,7 @@ All deliverables for your **45-minute panel / peer review** live in this folder.
 | Section | Slides | Content |
 |---------|--------|---------|
 | Opening | 0–3 | Title, intro, **Two Stories** agenda, journey |
-| **Story 1** | 4–8 | **Accenture Federal / DoD** — architecture, gov governance, impact |
+| **Story 1** | 4–8 | **DoD Migration** — architecture, gov governance, impact |
 | **Story 2** | 9–16 | **Blueprint / Partner** — microprocessor manufacturer, **Liquid Clustering**, MDFSG |
 | Closing | 17–20 | Data Intelligence Platform, features, community, thank you |
 
@@ -64,7 +64,7 @@ python update_rupert_deck.py
 
 | Asset | Type | Use |
 |-------|------|-----|
-| `assets/lakehouse-flow-animated.svg` | Animated SVG | **Story 1** — Accenture DoD (`index.html` ~6) |
+| `assets/lakehouse-flow-animated.svg` | Animated SVG | **Story 1** — DoD Migration (`index.html` ~6) |
 | `assets/nxp-lift-shift-animated.svg` | Animated SVG | **Story 2** — microprocessor manufacturer migration (~11) |
 | `assets/metadata-framework-flow-animated.svg` | Animated SVG | **Story 2** — MDFSG framework (~14) |
 | `assets/warehouse-lake-lakehouse-animated.svg` | Animated SVG | Optional evolution reference |
