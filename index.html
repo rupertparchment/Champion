@@ -165,7 +165,10 @@
     }
     .reveal .slide-compact .stories-col .tag { margin-bottom: 0.15em; }
 
-    .reveal .slide-governance .governance-cols { font-size: 0.68em; gap: 0.5rem; }
+    .reveal .slide-governance .governance-cols { font-size: 0.62em; gap: 0.45rem; grid-template-columns: 1fr 1fr 1fr; }
+    .reveal .slide-governance .governance-cols .card { padding: 0.4rem 0.45rem; }
+    .reveal .slide-governance .governance-cols .card h3 { font-size: 0.88em; margin: 0 0 0.22em; line-height: 1.15; }
+    .reveal .slide-governance .governance-cols ul li { margin-bottom: 0.1em; font-size: 0.92em; line-height: 1.16; }
     .reveal .slide-governance .panel-line { flex-shrink: 0; max-width: 920px; width: 100%; }
 
     .reveal .slide-business-context {
@@ -804,6 +807,22 @@
               <li><strong>Gold mirrored to Snowflake</strong> - RBAC for DoD consumers</li>
 
               <li>ADF orchestration, pipeline controls, Public Trust processes</li>
+
+            </ul>
+
+          </div>
+
+          <div class="card card-dod">
+
+            <h3 class="accent" style="color:#7ec8e3;">What we would do today</h3>
+
+            <ul>
+
+              <li><strong>Unity Catalog</strong> where gov cloud regions support it</li>
+
+              <li><strong>UC + Delta</strong> — lineage, RBAC, and time travel together</li>
+
+              <li><strong>Asset bundles</strong> + CI/CD for governed dev → prod promotion</li>
 
             </ul>
 
