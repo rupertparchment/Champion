@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-label="Data Intelligence Platform pipeline with Snowflake Gold mirror">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 500" role="img" aria-label="DoD Pipeline with Snowflake Gold mirror">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#1B3139"/>
@@ -21,7 +21,7 @@
   </defs>
 
   <rect width="980" height="500" fill="url(#bg)" rx="12"/>
-  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">DoD Migration - Data Intelligence Platform</text>
+  <text x="490" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">DoD Pipeline</text>
   <text x="490" y="56" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="11">Public Trust | Gold mirrored to Snowflake | Delta time travel (not full UC)</text>
 
   <!-- LEFT COLUMN -->
