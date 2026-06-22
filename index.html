@@ -211,14 +211,11 @@
     .reveal .slide-nxp-roles h2 { font-size: 1.05em; }
     .reveal .slide-nxp-roles h2::after { margin: 0.16em 0 0.28em; }
     .reveal .slide-nxp-roles .intro-frame { padding: 0.5rem 0.6rem; max-width: 100%; }
-    .reveal .slide-nxp-roles .nxp-pills { margin: 0 0 0.3em; gap: 0.3rem; }
-    .reveal .slide-nxp-roles .nxp-pills .pill { font-size: 0.46em; padding: 0.2em 0.48em; }
-    .reveal .slide-nxp-roles .nxp-intro { font-size: 0.56em !important; margin: 0 0 0.35em !important; line-height: 1.25; }
-    .reveal .slide-nxp-roles .nxp-cols { font-size: 0.64em; gap: 0.45rem; }
-    .reveal .slide-nxp-roles .card { padding: 0.4rem 0.5rem; }
-    .reveal .slide-nxp-roles .card h3 { font-size: 0.8em; margin: 0 0 0.2em; line-height: 1.15; }
-    .reveal .slide-nxp-roles ul li { margin-bottom: 0.12em; font-size: 0.93em; line-height: 1.18; padding-left: 1.1em; }
-    .reveal .slide-nxp-roles ul li::before { width: 5px; height: 5px; top: 0.48em; }
+    .reveal .slide-nxp-roles .nxp-three-cols { font-size: 0.58em; gap: 0.4rem; grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+    .reveal .slide-nxp-roles .nxp-three-cols .card { padding: 0.38rem 0.42rem; height: auto; overflow: visible; }
+    .reveal .slide-nxp-roles .nxp-three-cols .card h3 { font-size: 0.86em; margin: 0 0 0.18em; line-height: 1.12; }
+    .reveal .slide-nxp-roles .nxp-three-cols ul li { margin-bottom: 0.08em; font-size: 0.9em; line-height: 1.14; padding-left: 1.1em; }
+    .reveal .slide-nxp-roles .nxp-three-cols ul li::before { width: 5px; height: 5px; top: 0.48em; }
 
     .reveal .slide-liquid-clustering { overflow-y: hidden !important; padding: 0.6em 1.05em 0.65em !important; }
     .reveal .slide-liquid-clustering h2 { font-size: 1.05em; }
@@ -892,29 +889,19 @@
 
         <div class="intro-frame">
 
-          <div class="feature-row nxp-pills">
-            <span class="pill pill-highlight">Event Handler</span>
-            <span class="pill pill-highlight">Data Population</span>
-            <span class="pill pill-highlight">Streaming</span>
-          </div>
-
-          <p class="small nxp-intro">Databricks Partner contract - legacy Hadoop / Impala / <strong>KUDU</strong> NiFi ingest patterns</p>
-
-          <div class="two-col nxp-cols">
+          <div class="two-col nxp-three-cols">
 
             <div class="card card-bp">
 
-              <h3 class="accent" style="color:#ffd700;">My scope - Data Population</h3>
+              <h3 class="accent" style="color:#ffd700;">What was the problem</h3>
 
               <ul>
 
-                <li><strong>2+ PB</strong> straight to <strong>Gold</strong> - <strong>650+ tables</strong> (0.0001 GB - 150 TB each)</li>
+                <li>Legacy <strong>Hadoop / Impala / KUDU</strong> — NiFi ingest, <strong>2+ PB</strong>, <strong>650+ tables</strong></li>
 
-                <li>Historical ingest notebook - APAC operational files + <strong>AWS Snowball</strong> (USA)</li>
+                <li>SQL-first engineers rebuilding similar <strong>Silver/Gold logic</strong> in one-off notebooks</li>
 
-                <li><strong>parquet, csv, txt, json</strong> - Merge / Append / ReplaceWhere</li>
-
-                <li>Gold schemas mirror Hadoop / Impala - baseline for 6/1/2026 cutover</li>
+                <li>Need consistent <strong>medallion</strong> development with standardized <strong>SCD merges</strong></li>
 
               </ul>
 
@@ -922,17 +909,31 @@
 
             <div class="card">
 
-              <h3 class="accent">Parallel team - Event Handler &amp; Streaming</h3>
+              <h3 class="accent">What we did to fix it</h3>
 
               <ul>
 
-                <li><strong>Event Handler:</strong> NiFi event flows to <strong>Databricks notebooks</strong></li>
+                <li><strong>2+ PB straight to Gold</strong> — historical ingest notebook (APAC + Snowball)</li>
 
-                <li><strong>Streaming:</strong> medallion <strong>Bronze to Silver to Gold</strong> day-forward</li>
+                <li><strong>650+ tables</strong> mirrored Hadoop layout for <strong>6/1/2026 cutover</strong></li>
 
-                <li>Incremental from <strong>6/1/2026</strong> - appends to historical Gold</li>
+                <li>Parallel team: NiFi → notebooks, <strong>Bronze → Silver → Gold</strong> day-forward from cutover</li>
+
+              </ul>
+
+            </div>
+
+            <div class="card card-bp">
+
+              <h3 class="accent" style="color:#ffd700;">What we would do today</h3>
+
+              <ul>
+
+                <li><strong>MDFSG metadata framework</strong> — new Silver/Gold tables from a <strong>metadata row</strong>, not new pipeline code</li>
 
                 <li><strong>Liquid Clustering</strong> on Gold post-cutover (replaces static partitioning)</li>
+
+                <li><strong>Unity Catalog</strong> + <strong>asset bundles</strong> for governed commercial deployments</li>
 
               </ul>
 
@@ -1035,38 +1036,6 @@
         <p class="panel-line">Panel line: staged latest tech deliberately - mirror first, optimize once incremental workloads were real.</p>
 
       </section>
-
-
-      <section class="content-slide slide-bp slide-compact slide-sparse">
-
-        <div class="sparse-inner">
-
-          <h2><span class="tag tag-bp">Blueprint</span> Metadata Framework</h2>
-
-          <div class="intro-frame">
-
-            <div class="card card-bp">
-
-              <h3 class="accent">Business Problem</h3>
-
-              <ul>
-
-                <li>Engineers strong in <strong>SQL</strong> - rebuilding similar Silver/Gold logic in one-off notebooks</li>
-
-                <li>Need consistent <strong>medallion</strong> development with standardized SCD merges</li>
-
-                <li>Goal: new Silver/Gold tables from a <strong>metadata row</strong>, not new pipeline code</li>
-
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
 
 
       <section class="content-slide slide-bp slide-compact slide-sparse">
