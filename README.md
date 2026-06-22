@@ -64,7 +64,7 @@ python update_rupert_deck.py
 
 | Asset | Type | Use |
 |-------|------|-----|
-| `assets/lakehouse-flow-animated.svg` | Animated SVG | **Story 1** — DoD Migration (`index.html` ~6) |
+| `assets/dod-pipeline-animated.svg` | Animated SVG | **Story 1** — DoD Pipeline (`index.html` #/6) |
 | `assets/nxp-lift-shift-animated.svg` | Animated SVG | **Story 2** — microprocessor manufacturer migration (~11) |
 | `assets/metadata-framework-flow-animated.svg` | Animated SVG | **Story 2** — MDFSG framework (~14) |
 | `assets/warehouse-lake-lakehouse-animated.svg` | Animated SVG | Optional evolution reference |
