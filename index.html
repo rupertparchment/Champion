@@ -884,17 +884,17 @@
 
             <div class="card card-dod">
 
-              <h3 class="accent" style="color:#7ec8e3;">Databricks — ingestion &amp; transform</h3>
+              <h3 class="accent" style="color:#7ec8e3;">Databricks — better for ingest &amp; transform</h3>
 
               <ul>
 
                 <li><strong>100B+ rows/week</strong> — ADF → Salesforce API → S3 → <strong>Databricks notebooks</strong> → Bronze</li>
 
-                <li><strong>Delta medallion</strong> on managed tables — ACID merges, Bronze → Silver → Gold engineering</li>
+                <li><strong>Delta medallion</strong> — ACID merges, Bronze → Silver → Gold engineering at scale</li>
 
                 <li><strong>Delta time travel</strong> for audit and reprocess where full Unity Catalog was not available</li>
 
-                <li>One <strong>Data Intelligence Platform</strong> for high-volume ingest + transform vs stitched Spark jobs</li>
+                <li>One <strong>Data Intelligence Platform</strong> for volume ingest + transform — not consumer-facing SQL/BI</li>
 
               </ul>
 
@@ -902,17 +902,17 @@
 
             <div class="card">
 
-              <h3 class="accent" style="color:#29B5E8;">Snowflake — Gold for downstream analytics</h3>
+              <h3 class="accent" style="color:#29B5E8;">Snowflake — better for Gold consumption</h3>
 
               <ul>
 
-                <li>DoD requirement: analytics consumers already on <strong>Snowflake</strong></li>
+                <li>DoD analysts, dashboards, and SQL workloads <strong>already on Snowflake</strong></li>
 
-                <li><strong>Gold mirrored to Snowflake Gold</strong> — no re-platforming BI, SQL, or existing RBAC</li>
+                <li><strong>RBAC and BI tooling in place</strong> — governed access without re-platforming consumers</li>
 
-                <li>Downstream teams kept trusted tooling for <strong>governed access</strong> and self-service analysis</li>
+                <li><strong>Gold mirrored to Snowflake Gold</strong> — publish only the curated, analyst-ready layer</li>
 
-                <li><strong>Hybrid by design</strong> — Databricks transforms at scale; Snowflake consumes at the Gold layer</li>
+                <li>Lower-risk cutover: validate Gold where downstream jobs already run — <strong>not a Databricks vs Snowflake bake-off</strong></li>
 
               </ul>
 
@@ -922,7 +922,7 @@
 
         </div>
 
-        <p class="panel-line">Transform on Databricks · Consume on Snowflake — hybrid architecture, not either/or</p>
+        <p class="panel-line">Transform on Databricks · Consume on Snowflake — hybrid by design, not either/or</p>
 
       </section>
 
