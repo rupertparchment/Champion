@@ -11,7 +11,7 @@
   </defs>
 
   <rect width="960" height="380" fill="url(#bg2)" rx="12"/>
-  <text x="480" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="21" font-weight="700">Metadata-Driven Silver/Gold Framework (MDFSG)</text>
+  <text x="480" y="34" text-anchor="middle" fill="#FF3621" font-family="Segoe UI, sans-serif" font-size="21" font-weight="700">Metadata-Driven Framework Silver/Gold (MDFSG)</text>
   <text x="480" y="56" text-anchor="middle" fill="#8ab4b8" font-family="Segoe UI, sans-serif" font-size="12">Config row in - reusable notebook out - no new pipeline code per table</text>
 
   <g font-family="Segoe UI, sans-serif" font-size="11">
