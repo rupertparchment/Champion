@@ -171,6 +171,16 @@
     .reveal .slide-governance .governance-cols ul li { margin-bottom: 0.08em; font-size: 0.9em; line-height: 1.14; }
     .reveal .slide-governance .panel-line { flex-shrink: 0; max-width: 920px; width: 100%; font-size: 0.5em !important; margin-top: 0.35em; }
 
+    .reveal .slide-dod-hybrid { overflow-y: hidden !important; padding: 0.65em 1.1em 0.7em !important; }
+    .reveal .slide-dod-hybrid h2 { font-size: 1.08em; }
+    .reveal .slide-dod-hybrid h2::after { margin: 0.18em 0 0.32em; }
+    .reveal .slide-dod-hybrid .intro-frame { padding: 0.55rem 0.65rem; max-width: 100%; }
+    .reveal .slide-dod-hybrid .hybrid-cols { font-size: 0.68em; gap: 0.55rem; align-items: stretch; }
+    .reveal .slide-dod-hybrid .card { padding: 0.45rem 0.55rem; height: 100%; }
+    .reveal .slide-dod-hybrid .card h3 { font-size: 0.88em; margin: 0 0 0.22em; line-height: 1.15; }
+    .reveal .slide-dod-hybrid ul li { margin-bottom: 0.14em; font-size: 0.94em; line-height: 1.2; }
+    .reveal .slide-dod-hybrid .panel-line { flex-shrink: 0; max-width: 920px; width: 100%; font-size: 0.52em !important; margin-top: 0.4em; }
+
     .reveal .slide-business-context {
       overflow-y: hidden !important;
       justify-content: center !important;
@@ -859,6 +869,60 @@
         </div>
 
         </div>
+
+      </section>
+
+
+
+      <section class="content-slide slide-compact slide-dod slide-dod-hybrid">
+
+        <h2><span class="tag tag-dod">DoD Migration</span> Why Databricks + Snowflake</h2>
+
+        <div class="intro-frame">
+
+          <div class="two-col hybrid-cols">
+
+            <div class="card card-dod">
+
+              <h3 class="accent" style="color:#7ec8e3;">Databricks — ingestion &amp; transform</h3>
+
+              <ul>
+
+                <li><strong>100B+ rows/week</strong> — ADF → Salesforce API → S3 → <strong>Databricks notebooks</strong> → Bronze</li>
+
+                <li><strong>Delta medallion</strong> on managed tables — ACID merges, Bronze → Silver → Gold engineering</li>
+
+                <li><strong>Delta time travel</strong> for audit and reprocess where full Unity Catalog was not available</li>
+
+                <li>One <strong>Data Intelligence Platform</strong> for high-volume ingest + transform vs stitched Spark jobs</li>
+
+              </ul>
+
+            </div>
+
+            <div class="card">
+
+              <h3 class="accent" style="color:#29B5E8;">Snowflake — Gold for downstream analytics</h3>
+
+              <ul>
+
+                <li>DoD requirement: analytics consumers already on <strong>Snowflake</strong></li>
+
+                <li><strong>Gold mirrored to Snowflake Gold</strong> — no re-platforming BI, SQL, or existing RBAC</li>
+
+                <li>Downstream teams kept trusted tooling for <strong>governed access</strong> and self-service analysis</li>
+
+                <li><strong>Hybrid by design</strong> — Databricks transforms at scale; Snowflake consumes at the Gold layer</li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <p class="panel-line">Transform on Databricks · Consume on Snowflake — hybrid architecture, not either/or</p>
 
       </section>
 

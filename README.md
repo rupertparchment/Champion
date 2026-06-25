@@ -19,9 +19,9 @@ All deliverables for your **45-minute panel / peer review** live in this folder.
 | Section | Slides | Content |
 |---------|--------|---------|
 | Opening | 0–3 | Title, intro, **Two Stories** agenda, journey |
-| **Story 1** | 4–8 | **DoD Migration** — architecture, gov governance, impact |
-| **Story 2** | 9–14 | **Microprocessor manufacturer** — migration, MDFSG flow & impact |
-| Closing | 15–18 | Data Intelligence Platform, features, community, thank you |
+| **Story 1** | 4–9 | **DoD Migration** — architecture, gov governance, impact, hybrid rationale |
+| **Story 2** | 10–15 | **Microprocessor manufacturer** — migration, MDFSG flow & impact |
+| Closing | 16–19 | Data Intelligence Platform, features, community, thank you |
 
 See **`SPEAKER-NOTES.md`** for ~10 min + ~12 min timing per story.
 
